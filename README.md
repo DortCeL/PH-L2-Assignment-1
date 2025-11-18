@@ -3,14 +3,17 @@
 ## উত্তরঃ
 
 'keyof' কি-ওয়ার্ড টা কোনো টাইপের key গুলো কে স্ট্রিং হিসেবে এনে একটা Union টাইপ রিটার্ন করে। এতে করে আমরা সেইফলি কোনো অব্জেক্ট টাইপের প্রপার্টি গুলো কে বের করে আনতে পারি এবং কোথাও ব্যবহার করতে পারি। উদাহরণঃ
-`type Mobile {
-id: number;
-brand: string;
-model: string;
+
+```ts
+type Mobile {
+    id: number;
+    brand: string;
+    model: string;
 }
 
 type KeyOfMobile = keyof Mobile;
-`
+```
+
 এখানে KeyOfMobile হবে "id" | "brand" | "model".
 জেনেরিক টাইপ নিয়ে কাজ করার সময় keyof ব্যবহার হয়।
 
